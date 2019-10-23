@@ -10,4 +10,11 @@
     <string name="search_customer">Search Customer</string>
     <string name="add_customer">Add Customer</string>
     <string name="customers">Customers</string>
+    <string name="filter">Filter</string>
+    <string name="customer_name">Customer name</string>
+    <string name="customer_details">Customer Details</string>
+    <string name="all_customer">All Customer</string>
+    <string name="estimate">Estimate:</string>
+    <string name="amount">Amount</string>
+    <string name="save">Save</string>
 </resources>
