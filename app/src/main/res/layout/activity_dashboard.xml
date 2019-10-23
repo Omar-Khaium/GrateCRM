@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".View.DashboardActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="#F6F6FB">
+
+        <ImageView
+            android:id="@+id/dashboard_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/dashboard_search"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/dashboard_logo"
+            android:background="@drawable/ic_shape_search"
+            android:drawableStart="@drawable/ic_search"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeActionLabel="Search"
+            android:imeOptions="actionSearch"
+            android:drawablePadding="8dp"
+            android:focusedByDefault="false"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/search_customer"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dashboard_user_photo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_ui_face" />
+
+        <TextView
+            android:id="@+id/dashboard_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/dashboard_user_photo"
+            android:fontFamily="@font/font_bold"
+            android:text="Mr. Jack P Williams"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/font_bold"
+            android:text="@string/customers"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_customer"
+            android:drawableStart="@drawable/ic_add"
+            android:drawableTint="@android:color/white"
+            android:background="@drawable/ic_shape_primary_button"
+            android:padding="16dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/font_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

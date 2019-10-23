@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.omarkhaium.template">
+    package="com.piistech.gratecrm">
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:requiresSmallestWidthDp="600"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
 
     <application
         android:name=".Utils.StartUp"
-        android:largeHeap="true"
-        android:allowClearUserData="true"
-        android:resizeableActivity="true"
         android:allowBackup="true"
+        android:allowClearUserData="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.MainActivity"
+        <activity android:name=".View.DashboardActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".View.LoginActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,6 +6,8 @@
 
     <item>
         <bitmap
+
+            android:dither="true"
             android:gravity="center"
             android:src="@drawable/logo"/>
 

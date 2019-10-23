@@ -1,11 +1,11 @@
-package com.omarkhaium.template.Utils;
+package com.piistech.gratecrm.Utils;
 
 import android.app.Application;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
-import static com.omarkhaium.template.Utils.Constant.REALM_MIGRATION_VERSION;
+import static com.piistech.gratecrm.Utils.Constant.REALM_MIGRATION_VERSION;
 
 public class StartUp extends Application {
     @Override

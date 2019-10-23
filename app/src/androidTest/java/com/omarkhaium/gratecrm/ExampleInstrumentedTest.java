@@ -1,4 +1,4 @@
-package com.omarkhaium.template;
+package com.piistech.gratecrm;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.omarkhaium.template", appContext.getPackageName());
+        assertEquals("com.piistech.gratecrm", appContext.getPackageName());
     }
 }

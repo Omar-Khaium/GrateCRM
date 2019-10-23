@@ -1,4 +1,4 @@
-package com.omarkhaium.template.Utils;
+package com.piistech.gratecrm.Utils;
 
 public class Constant {
     public static final int REALM_MIGRATION_VERSION = 0;

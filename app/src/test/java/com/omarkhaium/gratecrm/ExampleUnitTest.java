@@ -1,4 +1,4 @@
-package com.omarkhaium.template;
+package com.piistech.gratecrm;
 
 import org.junit.Test;
 

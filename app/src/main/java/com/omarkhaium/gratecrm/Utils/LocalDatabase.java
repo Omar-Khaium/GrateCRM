@@ -1,9 +1,9 @@
-package com.omarkhaium.template.Utils;
+package com.piistech.gratecrm.Utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import static com.omarkhaium.template.Utils.Constant.LOCAL_DATABASE_NAME;
+import static com.piistech.gratecrm.Utils.Constant.LOCAL_DATABASE_NAME;
 
 public class LocalDatabase {
     public static void setIntValue(final Context context, String key, int value) {
