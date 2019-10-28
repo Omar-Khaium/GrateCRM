@@ -228,6 +228,7 @@
             app:layout_anchorGravity="bottom|center">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/customer_details_add_basement"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
@@ -266,6 +267,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/customer_details_add_recommended_level"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="36dp"
@@ -306,6 +308,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/customer_details_add_estimate"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"

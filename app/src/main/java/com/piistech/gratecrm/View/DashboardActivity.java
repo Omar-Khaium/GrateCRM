@@ -49,4 +49,12 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mList = null;
+        arrayList = null;
+        System.gc();
+    }
 }

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollIndicators="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:padding="8dp"
+                        android:text="Visual Basement Inspection"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="-8dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="1dp"
+                app:cardMaxElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Ground Water*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Ground Water Rating (1-10)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Iron Bacteria*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Iron Bacteria Rating (1-10)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Condensation*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Condensation Rating (1-10)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Wall Cracks*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Wall Cracks Rating (1-10)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Floor Cracks*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Floor Cracks Rating (1-10)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Existing Sump Pump*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Existing Drainage System*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Radon System(existing)*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Dryer vent to code?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Foundation Type*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/font_bold"
+                        android:text="Bulkhead*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_background_color="@color/colorSandOffWhite" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Other"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

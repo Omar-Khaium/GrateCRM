@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.piistech.gratecrm.Model.Repair;
+import com.piistech.gratecrm.Model.Estimate;
 import com.piistech.gratecrm.R;
 
 import java.util.ArrayList;
@@ -18,11 +18,11 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RepairAdapter extends RecyclerView.Adapter<RepairAdapter.ViewHolder> {
-    private ArrayList<Repair> arrayList;
+public class EstimateAdapter extends RecyclerView.Adapter<EstimateAdapter.ViewHolder> {
+    private ArrayList<Estimate> arrayList;
     private Context context;
 
-    public RepairAdapter(ArrayList<Repair> arrayList, Context context) {
+    public EstimateAdapter(ArrayList<Estimate> arrayList, Context context) {
         this.arrayList = arrayList;
         this.context = context;
     }
@@ -30,17 +30,18 @@ public class RepairAdapter extends RecyclerView.Adapter<RepairAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.row_layout_repair, parent, false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.row_layout_estimate, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Repair repair = arrayList.get(position);
-        holder.mID.setText(repair.getId());
-        holder.mDate.setText(repair.getDate());
-        holder.mLevel.setText(repair.getLevel());
-        holder.mTotalAmount.setText(repair.getAmount());
-        holder.mCash.setText(repair.getCash());
+        Estimate estimate = arrayList.get(position);
+
+        holder.mProduct.setText(estimate.getProduct());
+        holder.mDescription.setText(estimate.getDescription());
+        holder.mQuantity.setText(estimate.getQuantity());
+        holder.mRate.setText(estimate.getRate());
+        holder.mAmount.setText(estimate.getAmount());
 
         /*holder.mParent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,17 +57,17 @@ public class RepairAdapter extends RecyclerView.Adapter<RepairAdapter.ViewHolder
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.row_layout_repair_id)
-        TextView mID;
-        @BindView(R.id.row_layout_repair_date)
-        TextView mDate;
-        @BindView(R.id.row_layout_repair_level)
-        TextView mLevel;
-        @BindView(R.id.row_layout_repair_total)
-        TextView mTotalAmount;
-        @BindView(R.id.row_layout_repair_cash)
-        TextView mCash;
-        @BindView(R.id.row_layout_repair_parent)
+        @BindView(R.id.row_layout_estimate_product)
+        TextView mProduct;
+        @BindView(R.id.row_layout_estimate_description)
+        TextView mDescription;
+        @BindView(R.id.row_layout_estimate_quantity)
+        TextView mQuantity;
+        @BindView(R.id.row_layout_estimate_rate)
+        TextView mRate;
+        @BindView(R.id.row_layout_estimate_amount)
+        TextView mAmount;
+        @BindView(R.id.row_layout_estimate_parent)
         RelativeLayout mParent;
 
         public ViewHolder(@NonNull View itemView) {

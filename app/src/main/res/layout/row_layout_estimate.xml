@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/row_layout_customer_parent"
+    android:id="@+id/row_layout_estimate_parent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -28,20 +28,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/row_layout_customer_photo"
+                    <ImageView
+                        android:id="@+id/row_layout_estimate_photo"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_ui_face" />
+                        android:src="@drawable/ic_product"
+                        android:tint="@android:color/darker_gray" />
 
                     <TextView
-                        android:id="@+id/row_layout_customer_name"
+                        android:id="@+id/row_layout_estimate_product"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="8dp"
-                        android:layout_toEndOf="@id/row_layout_customer_photo"
+                        android:layout_toEndOf="@id/row_layout_estimate_photo"
                         android:ellipsize="end"
                         android:fontFamily="@font/font_regular"
                         android:hint="@string/customer_name"
@@ -56,19 +57,19 @@
                     android:layout_marginTop="4dp">
 
                     <ImageView
-                        android:id="@+id/row_layout_customer_call"
+                        android:id="@+id/row_layout_estimate_calender"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_call" />
+                        android:src="@drawable/ic_description"
+                        android:tint="@android:color/darker_gray" />
 
                     <TextView
-                        android:id="@+id/row_layout_customer_phone"
+                        android:id="@+id/row_layout_estimate_description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@id/row_layout_customer_call"
+                        android:layout_toEndOf="@id/row_layout_estimate_calender"
                         android:ellipsize="end"
                         android:fontFamily="@font/font_regular"
                         android:hint="Customer Phone"
@@ -83,19 +84,19 @@
                     android:layout_marginTop="4dp">
 
                     <ImageView
-                        android:id="@+id/row_layout_customer_mail"
+                        android:id="@+id/row_layout_estimate_recommended"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_email" />
+                        android:src="@drawable/ic_total" />
 
                     <TextView
-                        android:id="@+id/row_layout_customer_email"
+                        android:id="@+id/row_layout_estimate_quantity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="8dp"
-                        android:layout_toEndOf="@id/row_layout_customer_mail"
+                        android:layout_toEndOf="@id/row_layout_estimate_recommended"
                         android:ellipsize="end"
                         android:fontFamily="@font/font_regular"
                         android:hint="Customer Email"
@@ -114,26 +115,55 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
 
                     <ImageView
-                        android:id="@+id/row_layout_customer_location"
+                        android:id="@+id/row_layout_estimate_count"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:layout_alignParentTop="true"
-                        android:src="@drawable/ic_location" />
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_rate"
+                        android:tint="@android:color/darker_gray" />
 
                     <TextView
-                        android:id="@+id/row_layout_customer_address"
+                        android:id="@+id/row_layout_estimate_rate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="8dp"
-                        android:layout_toEndOf="@id/row_layout_customer_location"
+                        android:layout_toEndOf="@id/row_layout_estimate_count"
                         android:ellipsize="end"
                         android:fontFamily="@font/font_regular"
-                        android:hint="Customer Address1 \n Address 2 \n Address 3"
-                        android:maxLines="3"
+                        android:hint="Customer Email"
+                        android:singleLine="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorAccent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:id="@+id/row_layout_estimate_money"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_cash" />
+
+                    <TextView
+                        android:id="@+id/row_layout_estimate_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@id/row_layout_estimate_money"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_regular"
+                        android:hint="Customer Email"
+                        android:singleLine="true"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorAccent" />
                 </RelativeLayout>
@@ -148,45 +178,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:adjustViewBounds="true"
                 android:background="@drawable/ic_shape_circle"
                 android:padding="8dp"
-                android:src="@drawable/ic_download"
-                android:tint="@color/colorAccent" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:adjustViewBounds="true"
-                android:background="@drawable/ic_shape_circle"
-                android:padding="8dp"
-                android:src="@drawable/ic_print"
-                android:tint="@color/colorAccent" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:adjustViewBounds="true"
-                android:background="@drawable/ic_shape_circle"
-                android:padding="8dp"
-                android:src="@drawable/ic_add"
-                android:tint="@color/colorAccent" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:background="@drawable/ic_shape_circle"
-                android:padding="8dp"
-                android:src="@drawable/ic_edit"
+                android:src="@drawable/ic_delete"
                 android:tint="@color/colorAccent" />
         </LinearLayout>
     </RelativeLayout>
