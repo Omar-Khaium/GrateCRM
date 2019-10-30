@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.card.MaterialCardView;
 import com.piistech.gratecrm.Model.Customer;
@@ -33,6 +37,14 @@ public class CustomerDetailsActivity extends AppCompatActivity {
     MaterialCardView mRecommendedLevel;
     @BindView(R.id.customer_details_add_estimate)
     MaterialCardView mAddEstimate;
+    @BindView(R.id.customer_details_image)
+    ImageView mPhoto;
+    @BindView(R.id.customer_details_name)
+    TextView mName;
+    @BindView(R.id.row_layout_customer_phone)
+    TextView mPhone;
+    @BindView(R.id.row_layout_customer_email)
+    TextView mEmail;
 
     private ArrayList<Repair> arrayList = new ArrayList<>();
 
@@ -49,7 +61,14 @@ public class CustomerDetailsActivity extends AppCompatActivity {
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(CustomerDetailsActivity.this, DashboardActivity.class);
+                Pair[] pairs = new Pair[4];
+                pairs[0] = new Pair<View, String>(mPhoto, "customerImage");
+                pairs[1] = new Pair<View, String>(mName, "customerName");
+                pairs[2] = new Pair<View, String>(mPhone, "customerPhone");
+                pairs[3] = new Pair<View, String>(mEmail, "customerEmail");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(CustomerDetailsActivity.this, pairs);;
+                startActivity(intent, options.toBundle());
             }
         });
 

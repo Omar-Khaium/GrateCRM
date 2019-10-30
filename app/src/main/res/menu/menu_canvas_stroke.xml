@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/canvas_stroke_2"
+        android:icon="@drawable/ic_stroke"
+        android:title="2 px"/>
+
+    <item
+        android:id="@+id/canvas_stroke_4"
+        android:icon="@drawable/ic_stroke_4"
+        android:title="4 px"/>
+
+    <item
+        android:id="@+id/canvas_stroke_8"
+        android:icon="@drawable/ic_stroke_8"
+        android:title="8 px"/>
+
+    <item
+        android:id="@+id/canvas_stroke_16"
+        android:icon="@drawable/ic_stroke_16"
+        android:title="16 px"/>
+</menu>

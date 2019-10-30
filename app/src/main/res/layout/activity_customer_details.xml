@@ -10,36 +10,36 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimaryDark">
+        android:background="@android:color/white"
+        android:elevation="4dp">
 
-        <ImageView
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/customer_details_back"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:padding="16dp"
-            android:src="@drawable/ic_back"
-            android:tint="@android:color/white"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:useCompatPadding="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="16dp"/>
+            app:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorPrimary" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:fontFamily="@font/font_bold"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/customer_details_back"
             android:text="@string/customer_details"
-            android:layout_centerInParent="true"
-            android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/white" />
-
-
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:fontFamily="@font/font_bold" />
     </RelativeLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                app:cardBackgroundColor="#F5F5F5"
+                app:cardBackgroundColor="@color/colorOffWhite"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="2dp">
 
@@ -80,10 +80,12 @@
                                 android:layout_height="150dp">
 
                                 <ImageView
+                                    android:id="@+id/customer_details_image"
                                     android:layout_width="150dp"
                                     android:layout_height="150dp"
                                     android:adjustViewBounds="true"
                                     android:scaleType="centerCrop"
+                                    android:transitionName="customerImage"
                                     android:src="@drawable/ic_ui_face" />
 
                                 <RelativeLayout
@@ -110,12 +112,14 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/customer_details_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:fontFamily="@font/font_bold"
                                 android:hint="@string/customer_name"
                                 android:singleLine="true"
+                                android:transitionName="customerName"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                                 android:textColor="@color/colorAccent" />
 
@@ -138,6 +142,7 @@
                                     android:layout_marginStart="8dp"
                                     android:layout_toEndOf="@id/row_layout_customer_call"
                                     android:ellipsize="end"
+                                    android:transitionName="customerPhone"
                                     android:fontFamily="@font/font_regular"
                                     android:hint="Customer Phone"
                                     android:singleLine="true"
@@ -165,6 +170,7 @@
                                     android:layout_marginStart="8dp"
                                     android:layout_toEndOf="@id/row_layout_customer_mail"
                                     android:ellipsize="end"
+                                    android:transitionName="customerEmail"
                                     android:fontFamily="@font/font_regular"
                                     android:hint="Customer Email"
                                     android:singleLine="true"
@@ -352,6 +358,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customer_details_repair_list"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"
+        android:background="@android:color/white" />
 
 </LinearLayout>

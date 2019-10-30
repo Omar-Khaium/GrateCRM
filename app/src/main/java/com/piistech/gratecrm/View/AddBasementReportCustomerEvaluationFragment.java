@@ -18,7 +18,7 @@ public class AddBasementReportCustomerEvaluationFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        fragmentView =  inflater.inflate(R.layout.step_add_basement_visual_basement_inspection, container, false);
+        fragmentView =  inflater.inflate(R.layout.step_add_basement_customer_evaluation, container, false);
         return fragmentView;
     }
 

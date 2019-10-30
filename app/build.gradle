@@ -48,6 +48,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'com.stepstone.stepper:material-stepper:4.3.1'
     implementation 'com.github.divyanshub024:AndroidDraw:v0.1'
+    implementation 'com.hlab.fabrevealmenu:fab-reveal-menu:1.0.4'
     testImplementation 'junit:junit:4.12'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'

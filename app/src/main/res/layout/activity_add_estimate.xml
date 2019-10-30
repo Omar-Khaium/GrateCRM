@@ -26,6 +26,7 @@
             app:fabSize="mini" />
 
         <RelativeLayout
+            android:id="@+id/add_estimate_all_customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"

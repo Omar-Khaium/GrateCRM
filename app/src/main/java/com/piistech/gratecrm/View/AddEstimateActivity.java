@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.piistech.gratecrm.Model.Estimate;
@@ -21,9 +23,10 @@ public class AddEstimateActivity extends AppCompatActivity {
 
     @BindView(R.id.estimate_list)
     RecyclerView mList;
-
     @BindView(R.id.estimate_close)
     FloatingActionButton mBack;
+    @BindView(R.id.add_estimate_all_customer)
+    RelativeLayout mAllCustomer;
 
     private ArrayList<Estimate> arrayList = new ArrayList<>();
 
@@ -33,10 +36,18 @@ public class AddEstimateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_estimate);
         ButterKnife.bind(this);
         getData();
+
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        mAllCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AddEstimateActivity.this, DashboardActivity.class));
             }
         });
 

@@ -59,257 +59,517 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Ground Water*"
+                        android:singleLine="true"
+                        android:text="1. Have you ever noticed smells/odors coming from the basement?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Ground Water Rating (1-10)"
+                        android:singleLine="true"
+                        android:text="2. Have you ever noticed mold/mildew on any item in the basement?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Iron Bacteria*"
+                        android:singleLine="true"
+                        android:text="3. How often do you go down in the basement?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Iron Bacteria Rating (1-10)"
+                        android:singleLine="true"
+                        android:text="4. Does anyone in the home suffer from respiratory problems?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Condensation*"
+                        android:singleLine="true"
+                        android:text="5. Do your children play in the basement?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Condensation Rating (1-10)"
+                        android:singleLine="true"
+                        android:text="6. Do you have pets that go in the basement?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Wall Cracks*"
+                        android:singleLine="true"
+                        android:text="7. Have you ever noticed bugs/rodents in the basement?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Wall Cracks Rating (1-10)"
+                        android:singleLine="true"
+                        android:text="8. Do you get water?* How high does the water level get?"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Floor Cracks*"
+                        android:singleLine="true"
+                        android:text="9. How do you normally remove the water from basement?"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Floor Cracks Rating (1-10)"
+                        android:singleLine="true"
+                        android:text="10. Do you ever see pipes dripping (condensation)?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Existing Sump Pump*"
+                        android:singleLine="true"
+                        android:text="11. Have you done any repairs to try and fix these problems?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Existing Drainage System*"
+                        android:singleLine="true"
+                        android:text="12. How long do you plan on living here?* Are you planning to sell*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Radon System(existing)*"
+                        android:singleLine="true"
+                        android:text="13. What are your plans for the basement once it is dry?"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Dryer vent to code?*"
+                        android:singleLine="true"
+                        android:text="14. Has your home been tested for radon in the past 2 years?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="4"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_marginTop="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:fontFamily="@font/font_bold"
-                        android:text="Foundation Type*"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
-
-                    <TextView
                         android:layout_marginTop="8dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
                         android:fontFamily="@font/font_bold"
-                        android:text="Bulkhead*"
+                        android:singleLine="true"
+                        android:text="15. Do you lose power?* If so how often?*"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:layout_marginTop="4dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:ms_background_color="@color/colorSandOffWhite" />
+                        android:layout_height="54dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:ms_background_color="@color/colorSandOffWhite" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"

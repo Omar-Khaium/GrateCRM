@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.button.MaterialButton;
 import com.piistech.gratecrm.Model.Customer;
 import com.piistech.gratecrm.R;
 import com.piistech.gratecrm.Utils.Adapter.CustomerAdapter;
@@ -19,6 +22,8 @@ public class DashboardActivity extends AppCompatActivity {
 
     @BindView(R.id.dashboard_list)
     RecyclerView mList;
+    @BindView(R.id.dashboard_add_customer)
+    MaterialButton mAddCustomer;
 
     private ArrayList<Customer> arrayList = new ArrayList<>();
 
@@ -31,6 +36,13 @@ public class DashboardActivity extends AppCompatActivity {
         getData();
         mList.setLayoutManager(new LinearLayoutManager(this));
         mList.setAdapter(new CustomerAdapter(arrayList,this));
+
+        mAddCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), AddCustomerActivity.class));
+            }
+        });
     }
 
     private void getData() {

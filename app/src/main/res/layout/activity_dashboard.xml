@@ -4,18 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:orientation="vertical"
-    tools:context=".View.DashboardActivity"
     android:focusable="true"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".View.DashboardActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:padding="16dp"
+        android:background="#F6F6FB"
         android:gravity="center_vertical"
-        android:background="#F6F6FB">
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/dashboard_logo"
@@ -33,16 +33,16 @@
             android:layout_toEndOf="@id/dashboard_logo"
             android:background="@drawable/ic_shape_search"
             android:drawableStart="@drawable/ic_search"
-            android:singleLine="true"
-            android:inputType="text"
-            android:imeActionLabel="Search"
-            android:imeOptions="actionSearch"
             android:drawablePadding="8dp"
             android:focusedByDefault="false"
             android:fontFamily="@font/font_regular"
             android:gravity="center_vertical"
             android:hint="@string/search_customer"
+            android:imeActionLabel="Search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
             android:padding="8dp"
+            android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorAccent"
             android:textColorHint="@android:color/darker_gray" />
@@ -70,8 +70,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
         android:layout_marginTop="16dp"
+        android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
         <TextView
@@ -83,47 +83,48 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/colorAccent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dashboard_filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="@string/filter"
-            android:drawableStart="@drawable/ic_filter"
-            android:drawableTint="@color/colorPrimaryDark"
-            android:background="@drawable/ic_shape_outline_button"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingRight="16dp"
-            android:paddingLeft="16dp"
-            android:elevation="16dp"
-            android:drawablePadding="8dp"
             android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/dashboard_add_customer"
+            android:drawablePadding="8dp"
+            android:elevation="4dp"
             android:fontFamily="@font/font_bold"
+            android:paddingLeft="24dp"
+            android:paddingTop="12dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="12dp"
+            android:text="@string/filter"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/colorPrimary"
-            android:layout_toStartOf="@+id/dashboard_add_customer"/>
+            app:backgroundTint="@android:color/white"
+            app:cornerRadius="72dp"
+            app:icon="@drawable/ic_filter"
+            app:iconTint="@color/colorPrimary" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/dashboard_add_customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:text="@string/add_customer"
-            android:drawableStart="@drawable/ic_add"
-            android:drawableTint="@android:color/white"
-            android:background="@drawable/ic_shape_primary_button"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:paddingRight="16dp"
-            android:paddingLeft="16dp"
-            android:elevation="16dp"
-            android:drawablePadding="8dp"
             android:layout_marginEnd="16dp"
+            android:drawablePadding="8dp"
+            android:elevation="4dp"
             android:fontFamily="@font/font_bold"
+            android:paddingLeft="24dp"
+            android:paddingTop="12dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="12dp"
+            android:text="@string/add_customer"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@android:color/white"
-            android:layout_alignParentEnd="true"/>
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="72dp"
+            app:icon="@drawable/ic_add" />
 
     </RelativeLayout>
 

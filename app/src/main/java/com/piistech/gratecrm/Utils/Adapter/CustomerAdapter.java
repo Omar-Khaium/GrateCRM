@@ -1,7 +1,10 @@
 package com.piistech.gratecrm.Utils.Adapter;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +51,15 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
         holder.mParent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, CustomerDetailsActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                Intent intent = new Intent(context, CustomerDetailsActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Pair[] pairs = new Pair[4];
+                pairs[0] = new Pair<View, String>(holder.mPhoto, "customerImage");
+                pairs[1] = new Pair<View, String>(holder.mName, "customerName");
+                pairs[2] = new Pair<View, String>(holder.mPhone, "customerPhone");
+                pairs[3] = new Pair<View, String>(holder.mEmail, "customerEmail");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, pairs);;
+                context.startActivity(intent, options.toBundle());
             }
         });
     }
