@@ -1,17 +1,19 @@
 package com.piistech.gratecrm.Model;
 
-public class Customer {
-    private String id;
+import java.io.Serializable;
+
+public class Customer implements Serializable {
+    private int id;
     private String name;
     private String phone;
     private String email;
     private String address;
-    private int photo;
+    private String photo;
 
     public Customer() {
     }
 
-    public Customer(String id, String name, String phone, String email, String address, int photo) {
+    public Customer(int id, String name, String phone, String email, String address, String photo) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -20,11 +22,11 @@ public class Customer {
         this.photo = photo;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -60,11 +62,11 @@ public class Customer {
         this.address = address;
     }
 
-    public int getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(int photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 }

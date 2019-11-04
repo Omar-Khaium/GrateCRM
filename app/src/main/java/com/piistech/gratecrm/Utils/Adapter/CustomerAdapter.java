@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHolder> {
-    private ArrayList<Customer> arrayList;
+    private ArrayList<Customer> arrayList = new ArrayList<>();
     private Context context;
 
     public CustomerAdapter(ArrayList<Customer> arrayList, Context context) {
@@ -36,13 +36,12 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.row_layout_cutomer, parent, false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.row_layout_customer, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Customer customer = arrayList.get(position);
-        holder.mPhoto.setImageResource(customer.getPhoto());
         holder.mName.setText(customer.getName());
         holder.mPhone.setText(customer.getPhone());
         holder.mEmail.setText(customer.getEmail());
@@ -52,6 +51,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, CustomerDetailsActivity.class);
+                intent.putExtra("id", String.valueOf(customer.getId()));
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Pair[] pairs = new Pair[4];
                 pairs[0] = new Pair<View, String>(holder.mPhoto, "customerImage");

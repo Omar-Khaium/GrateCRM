@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/login_root_layout"
+    android:id="@+id/bottom_sheet_root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     android:clickable="true"
+    android:fitsSystemWindows="true"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    tools:context=".View.LoginActivity"
-    android:fitsSystemWindows="true">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha=".075"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background" />
+    android:focusableInTouchMode="true">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardBackgroundColor="@color/colorPrimary"
-        app:cardElevation="48dp"
-        app:cardMaxElevation="64dp"
+        app:cardElevation="50dp"
+        app:cardMaxElevation="100dp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -43,41 +33,19 @@
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/basement" />
+                    android:src="@drawable/token_expired" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:alpha=".7"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/confetti" />
-
-                <LinearLayout
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:orientation="vertical">
+                    android:paddingTop="166dp"
+                    android:fontFamily="@font/font_bold"
+                    android:text="Token Expired"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/font_bold"
-                        android:text="Welcome To Grate App"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                        android:textColor="@android:color/white" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="@string/login_text"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="#BFFFFFFF" />
-                </LinearLayout>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -122,7 +90,7 @@
                     android:orientation="vertical">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/login_username"
+                        android:id="@+id/bottom_sheet_login_username"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -147,7 +115,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/login_password"
+                        android:id="@+id/bottom_sheet_login_password"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -180,52 +148,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp">
 
-                        <CheckBox
-                            android:id="@+id/login_remember_me"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:buttonTint="@color/colorPrimary"
-                            android:fontFamily="@font/font_regular"
-                            android:text="@string/remember_me"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimary" />
-
                         <com.google.android.material.button.MaterialButton
-                            android:id="@+id/login_submit"
+                            android:id="@+id/bottom_sheet_login_submit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:fontFamily="@font/font_bold"
-                            app:backgroundTint="@color/colorPrimary"
+                            android:paddingLeft="48dp"
+                            android:paddingTop="16dp"
+                            android:paddingRight="48dp"
+                            android:paddingBottom="16dp"
                             android:text="@string/log_in"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@android:color/white"
-                            app:cornerRadius="72dp"
                             android:transitionName="transitionLogin"
-                            android:paddingTop="16dp"
-                            android:paddingBottom="16dp"
-                            android:paddingLeft="48dp"
-                            android:paddingRight="48dp"/>
+                            app:backgroundTint="@color/colorPrimary"
+                            app:cornerRadius="72dp" />
 
                     </RelativeLayout>
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/login_forget_password"
+                    android:id="@+id/bottom_sheet_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="24dp"
                     android:fontFamily="@font/font_bold"
-                    android:text="@string/forget_password"
+                    android:text="Back to Login"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorPrimary"
                     android:transitionName="transitionForgetPassword" />
             </RelativeLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
-</RelativeLayout>
+</LinearLayout>

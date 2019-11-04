@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.piistech.gratecrm">
 
     <supports-screens
@@ -9,15 +10,25 @@
         android:smallScreens="false"
         android:xlargeScreens="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".Utils.StartUp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:theme="@style/AppTheme">
-        <activity android:name=".View.AddCustomerActivity"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".View.ForgetPasswordActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".View.AddCustomerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".View.AddBasementReportActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -45,6 +56,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".Utils.Service.CustomerDetailsService"
+            android:exported="false" />
+        <service
+            android:name=".Utils.Service.LoginService"
+            android:exported="false" />
+        <service
+            android:name=".Utils.Service.DashboardService"
+            android:exported="false" />
+        <service
+            android:name=".Utils.Service.TokenValidationService"
+            android:exported="false" />
+        <service
+            android:name=".Utils.Service.SaveCustomerService"
+            android:exported="false" />
     </application>
 
 </manifest>

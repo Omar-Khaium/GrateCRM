@@ -17,5 +17,7 @@
     <string name="estimate">Estimate:</string>
     <string name="amount">Amount</string>
     <string name="save">Save</string>
+    <string name="submit">Submit</string>
+    <string name="loading">Loading...</string>
     <string name="basement_inspection_report">Basement Inspection Report</string>
 </resources>

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
     android:focusableInTouchMode="true"
-    android:orientation="vertical"
-    tools:context=".View.AddCustomerActivity">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -63,7 +61,6 @@
                     android:weightSum="2">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/add_customer_first_name"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -90,7 +87,6 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/add_customer_last_name"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -119,7 +115,6 @@
                 </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/add_customer_business_name"
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -133,7 +128,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_business"
+                        android:drawableStart="@drawable/ic_person"
                         android:drawablePadding="8dp"
                         android:drawableTint="@color/colorPrimary"
                         android:fontFamily="@font/font_regular"
@@ -146,7 +141,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.jaredrummler.materialspinner.MaterialSpinner
-                    android:id="@+id/add_customer_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -169,7 +163,6 @@
                     android:weightSum="2">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/add_customer_primary_phone"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -183,7 +176,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/ic_phone"
+                            android:drawableStart="@drawable/ic_person"
                             android:drawablePadding="8dp"
                             android:drawableTint="@color/colorPrimary"
                             android:fontFamily="@font/font_regular"
@@ -196,13 +189,12 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/add_customer_secondary_phone"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="36dp"
                         android:layout_weight="1"
-                        android:hint="Secondary Phone"
+                        android:hint="Secondary Name"
                         app:boxBackgroundColor="@color/colorOffWhite"
                         app:boxBackgroundMode="filled"
                         app:boxStrokeColor="@color/colorPrimaryDark"
@@ -211,7 +203,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/ic_phone"
+                            android:drawableStart="@drawable/ic_person"
                             android:drawablePadding="8dp"
                             android:drawableTint="@color/colorPrimary"
                             android:fontFamily="@font/font_regular"
@@ -225,61 +217,6 @@
                 </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/add_customer_cell_no"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:hint="Cell No"
-                    app:boxBackgroundColor="@color/colorOffWhite"
-                    app:boxBackgroundMode="filled"
-                    app:boxStrokeColor="@color/colorPrimaryDark"
-                    app:hintEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_phone"
-                        android:drawablePadding="8dp"
-                        android:drawableTint="@color/colorPrimary"
-                        android:fontFamily="@font/font_regular"
-                        android:imeOptions="actionNext"
-                        android:inputType="phone"
-                        android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:textColor="@color/colorPrimary"
-                        android:textColorHint="@android:color/darker_gray" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/add_customer_email"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:hint="Email *"
-                    app:boxBackgroundColor="@color/colorOffWhite"
-                    app:boxBackgroundMode="filled"
-                    app:boxStrokeColor="@color/colorPrimaryDark"
-                    app:hintEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_email"
-                        android:drawablePadding="8dp"
-                        android:drawableTint="@color/colorPrimary"
-                        android:fontFamily="@font/font_regular"
-                        android:imeOptions="actionNext"
-                        android:inputType="textEmailAddress"
-                        android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:textColor="@color/colorPrimary"
-                        android:textColorHint="@android:color/darker_gray" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/add_customer_street"
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -293,7 +230,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_street"
+                        android:drawableStart="@drawable/ic_person"
                         android:drawablePadding="8dp"
                         android:drawableTint="@color/colorPrimary"
                         android:fontFamily="@font/font_regular"
@@ -306,7 +243,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/add_customer_city"
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -320,7 +256,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_city"
+                        android:drawableStart="@drawable/ic_person"
                         android:drawablePadding="8dp"
                         android:drawableTint="@color/colorPrimary"
                         android:fontFamily="@font/font_regular"
@@ -340,7 +276,6 @@
                     android:weightSum="2">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/add_customer_state"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -349,14 +284,12 @@
                         app:boxBackgroundColor="@color/colorOffWhite"
                         app:boxBackgroundMode="filled"
                         app:boxStrokeColor="@color/colorPrimaryDark"
-                        app:counterEnabled="true"
-                        app:counterMaxLength="2"
                         app:hintEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/ic_state"
+                            android:drawableStart="@drawable/ic_person"
                             android:drawablePadding="8dp"
                             android:drawableTint="@color/colorPrimary"
                             android:fontFamily="@font/font_regular"
@@ -371,7 +304,6 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/add_customer_zip_code"
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -381,14 +313,12 @@
                         app:boxBackgroundColor="@color/colorOffWhite"
                         app:boxBackgroundMode="filled"
                         app:boxStrokeColor="@color/colorPrimaryDark"
-                        app:counterEnabled="true"
-                        app:counterMaxLength="5"
                         app:hintEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/ic_location"
+                            android:drawableStart="@drawable/ic_person"
                             android:drawablePadding="8dp"
                             android:drawableTint="@color/colorPrimary"
                             android:fontFamily="@font/font_regular"
@@ -401,148 +331,106 @@
                             android:textColorHint="@android:color/darker_gray" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/font_regular"
+                    android:paddingStart="64dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="64dp"
+                    android:paddingBottom="16dp"
+                    android:text="Submit"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="72dp" />
+
             </LinearLayout>
         </ScrollView>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            android:padding="36dp">
 
-            <ScrollView
-                android:id="@+id/add_customer_status_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical"
-                    android:padding="36dp">
-
-                    <TextView
-                        android:id="@+id/add_customer_first_name_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* First Name"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_last_name_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* Last Name"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_type_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* Type"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_primary_phone_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* Primary Phone"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_email_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* Email"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_street_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* Street"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_city_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* City"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_state_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* State"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                    <TextView
-                        android:id="@+id/add_customer_zip_code_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawablePadding="24dp"
-                        android:fontFamily="@font/font_bold"
-                        android:text="* Zip Code"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:textColor="@android:color/darker_gray" />
-
-                </LinearLayout>
-
-            </ScrollView>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/add_customer_submit"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="end"
-                android:layout_margin="16dp"
-                android:fontFamily="@font/font_bold"
-                android:paddingStart="64dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="64dp"
-                android:paddingBottom="16dp"
-                android:text="Submit"
-                android:textAllCaps="true"
+                android:fontFamily="@font/font_regular"
+                android:text="* First Name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorPrimary"
-                android:visibility="gone"
-                app:backgroundTint="@android:color/white"
-                app:cornerRadius="72dp" />
-        </RelativeLayout>
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="* Last Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="* Type"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="* Primary Phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="* Street"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="* City"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="* State"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/font_regular"
+                android:text="* Zip Code"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

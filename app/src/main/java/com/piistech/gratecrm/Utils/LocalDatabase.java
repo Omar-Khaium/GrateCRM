@@ -15,6 +15,15 @@ public class LocalDatabase {
     public static int getIntValue(final Context context, String key) {
         return context.getSharedPreferences(LOCAL_DATABASE_NAME, Context.MODE_PRIVATE).getInt(key,0);
     }
+    public static void setLongValue(final Context context, String key, long value) {
+        final SharedPreferences prefs = context.getSharedPreferences( LOCAL_DATABASE_NAME, Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = prefs.edit();
+        editor.putLong(key, value);
+        editor.commit();
+    }
+    public static long getLongValue(final Context context, String key) {
+        return context.getSharedPreferences(LOCAL_DATABASE_NAME, Context.MODE_PRIVATE).getLong(key,0);
+    }
 
     public static void setFloatValue(final Context context, String key, Float value) {
         final SharedPreferences prefs = context.getSharedPreferences( LOCAL_DATABASE_NAME, Context.MODE_PRIVATE);
