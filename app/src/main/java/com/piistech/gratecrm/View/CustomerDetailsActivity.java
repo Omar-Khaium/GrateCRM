@@ -6,7 +6,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,12 +27,12 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.piistech.gratecrm.Model.Customer;
 import com.piistech.gratecrm.Model.Repair;
 import com.piistech.gratecrm.R;
-import com.piistech.gratecrm.Utils.Adapter.CustomerAdapter;
 import com.piistech.gratecrm.Utils.Adapter.RepairAdapter;
 import com.piistech.gratecrm.Utils.LocalDatabase;
 import com.piistech.gratecrm.Utils.Service.CustomerDetailsService;
 import com.piistech.gratecrm.Utils.Service.LoginService;
 import com.piistech.gratecrm.Utils.Service.TokenValidationService;
+import com.piistech.gratecrm.View.Login.LoginActivity;
 
 import java.util.ArrayList;
 

@@ -61,7 +61,8 @@ public class DashboardService extends IntentService {
                     public void onResponse(String response) {
                         try {
                             JSONObject json = new JSONObject(response);
-                            JSONArray jsonArray = json.getJSONArray("CustomerList");
+                            JSONObject jsonObject= json.getJSONObject("CustomerList");
+                            JSONArray jsonArray = jsonObject.getJSONArray("CustomerList");
                             Gson gson = new Gson();
                             CustomerAPI[] customerAPIS = gson.fromJson(jsonArray.toString(), CustomerAPI[].class);
                             ArrayList<Customer> customerArrayList = new ArrayList<>();

@@ -1,12 +1,18 @@
 package com.piistech.gratecrm.Utils;
 
 
+import android.content.Context;
 import android.view.View;
 import android.widget.CheckBox;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.piistech.gratecrm.Model.ColorItem;
+import com.piistech.gratecrm.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -284,6 +290,14 @@ public class Constant {
                 }
             }
         }
+    }
+
+    public static void sendToFragment(Context context, View view, Fragment fragment) {
+        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+        FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.user_module_container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commitAllowingStateLoss();
     }
 
 }

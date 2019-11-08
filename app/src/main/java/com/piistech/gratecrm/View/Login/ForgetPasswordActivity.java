@@ -1,4 +1,4 @@
-package com.piistech.gratecrm.View;
+package com.piistech.gratecrm.View.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 

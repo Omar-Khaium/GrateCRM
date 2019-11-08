@@ -1,4 +1,4 @@
-package com.piistech.gratecrm.View;
+package com.piistech.gratecrm.View.Login;
 
 import android.app.ActivityOptions;
 import android.content.BroadcastReceiver;
@@ -10,7 +10,6 @@ import android.util.Pair;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
@@ -20,6 +19,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.piistech.gratecrm.R;
 import com.piistech.gratecrm.Utils.LocalDatabase;
 import com.piistech.gratecrm.Utils.Service.LoginService;
+import com.piistech.gratecrm.View.DashboardActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

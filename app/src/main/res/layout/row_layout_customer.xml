@@ -7,8 +7,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="36dp"
-        android:paddingEnd="36dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp" >
 
@@ -50,7 +48,7 @@
                         android:fontFamily="@font/font_regular"
                         android:hint="@string/customer_name"
                         android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorAccent"
                         android:transitionName="customerName" />
                 </RelativeLayout>
@@ -78,7 +76,7 @@
                         android:fontFamily="@font/font_regular"
                         android:hint="Customer Phone"
                         android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorAccent"
                         android:transitionName="customerPhone" />
                 </RelativeLayout>
@@ -106,7 +104,7 @@
                         android:fontFamily="@font/font_regular"
                         android:hint="Customer Email"
                         android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorAccent"
                         android:transitionName="customerEmail" />
                 </RelativeLayout>
@@ -141,7 +139,7 @@
                         android:fontFamily="@font/font_regular"
                         android:hint="Customer Address1 \n Address 2 \n Address 3"
                         android:maxLines="3"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorAccent" />
                 </RelativeLayout>
 
@@ -202,8 +200,6 @@
         android:layout_width="match_parent"
         android:layout_height=".1px"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="36dp"
         android:elevation="4dp"
         android:background="#2AAA" />
 </RelativeLayout>

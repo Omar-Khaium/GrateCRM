@@ -9,33 +9,32 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputLayout;
 import com.piistech.gratecrm.Model.Customer;
 import com.piistech.gratecrm.R;
-import com.piistech.gratecrm.Utils.Adapter.CustomerAdapter;
 import com.piistech.gratecrm.Utils.LocalDatabase;
-import com.piistech.gratecrm.Utils.Service.DashboardService;
 import com.piistech.gratecrm.Utils.Service.LoginService;
 import com.piistech.gratecrm.Utils.Service.TokenValidationService;
+import com.piistech.gratecrm.View.Login.LoginActivity;
+import com.piistech.gratecrm.View.User.Fragments.DashboardFragment;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.piistech.gratecrm.Utils.Constant.API_RESULT;
 import static com.piistech.gratecrm.Utils.Constant.API_STATUS;
-import static com.piistech.gratecrm.Utils.Constant.BROADCAST_ID_FOR_DASHBOARD;
 import static com.piistech.gratecrm.Utils.Constant.BROADCAST_ID_FOR_LOGIN;
 import static com.piistech.gratecrm.Utils.Constant.BROADCAST_ID_FOR_TOKEN_EXPIRE;
 import static com.piistech.gratecrm.Utils.Constant.INPUT_PASSWORD;
@@ -59,14 +58,42 @@ public class DashboardActivity extends AppCompatActivity {
     private AlertDialog alert;
     private ArrayList<Customer> arrayList = new ArrayList<>();
 
-    @BindView(R.id.dashboard_root_layout)
-    View rootLayout;
-    @BindView(R.id.dashboard_list)
-    RecyclerView mList;
-    @BindView(R.id.dashboard_add_customer)
-    MaterialButton mAddCustomer;
-    @BindView(R.id.dashboard_shimmer)
-    LinearLayout mShimmer;
+    @BindView(R.id.user_nav_account_holder_name_text)
+    TextView mUserName;
+
+    @BindView(R.id.user_nav_home)
+    MaterialCardView mNavHome;
+    @BindView(R.id.user_nav_home_logo)
+    ImageView mNavHomeLogo;
+    @BindView(R.id.user_nav_home_text)
+    TextView mNavHomeText;
+
+    @BindView(R.id.user_nav_add_customer)
+    MaterialCardView mNavAddCustomer;
+    @BindView(R.id.user_nav_add_customer_logo)
+    ImageView mNavAddCustomerLogo;
+    @BindView(R.id.user_nav_add_customer_text)
+    TextView mNavAddCustomerText;
+
+    @BindView(R.id.user_nav_change_password)
+    MaterialCardView mNavChangePassword;
+    @BindView(R.id.user_nav_change_password_logo)
+    ImageView mNavChangePasswordLogo;
+    @BindView(R.id.user_nav_change_password_text)
+    TextView mNavChangePasswordText;
+
+    @BindView(R.id.user_nav_sign_out)
+    MaterialCardView mNavLogout;
+    @BindView(R.id.user_nav_sign_out_logo)
+    ImageView mNavLogoutLogo;
+    @BindView(R.id.user_nav_sign_out_text)
+    TextView mNavLogoutText;
+
+
+    @BindView(R.id.user_module_name)
+    TextView mModuleName;
+    @BindView(R.id.user_module_search)
+    SearchView mModuleSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,14 +101,50 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         ButterKnife.bind(this);
 
-        arrayList = new ArrayList<>();
-        mList.setLayoutManager(new LinearLayoutManager(this));
-        mList.setAdapter(new CustomerAdapter(arrayList, this));
-
-        mAddCustomer.setOnClickListener(new View.OnClickListener() {
+        mNavHome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), AddCustomerActivity.class));
+            public void onClick(View v) {
+                resetNav();
+                mModuleName.setText(getResources().getString(R.string.dashboard));
+                mNavHome.setCardElevation(4.0f);
+                mNavHome.setCardBackgroundColor(getResources().getColor(R.color.colorAccent));
+                mNavHomeLogo.setColorFilter(getResources().getColor(android.R.color.white));
+                mNavHomeText.setTextColor(getResources().getColor(android.R.color.white));
+                getSupportFragmentManager().beginTransaction().replace(R.id.user_module_container, new DashboardFragment()).commitAllowingStateLoss();
+            }
+        });
+
+        mNavAddCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetNav();
+                mModuleName.setText(getResources().getString(R.string.add_customer));
+                mNavAddCustomer.setCardElevation(4.0f);
+                mNavAddCustomer.setCardBackgroundColor(getResources().getColor(R.color.colorAccent));
+                mNavAddCustomerLogo.setColorFilter(getResources().getColor(android.R.color.white));
+                mNavAddCustomerText.setTextColor(getResources().getColor(android.R.color.white));
+            }
+        });
+
+        mNavChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetNav();
+                mNavChangePassword.setCardElevation(4.0f);
+                mNavChangePassword.setCardBackgroundColor(getResources().getColor(R.color.colorAccent));
+                mNavChangePasswordLogo.setColorFilter(getResources().getColor(android.R.color.white));
+                mNavChangePasswordText.setTextColor(getResources().getColor(android.R.color.white));
+            }
+        });
+
+        mNavLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetNav();
+                mNavLogout.setCardElevation(4.0f);
+                mNavLogout.setCardBackgroundColor(getResources().getColor(R.color.colorAccent));
+                mNavLogoutLogo.setColorFilter(getResources().getColor(android.R.color.white));
+                mNavLogoutText.setTextColor(getResources().getColor(android.R.color.white));
             }
         });
     }
@@ -89,8 +152,6 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mList = null;
-        arrayList = null;
         System.gc();
     }
 
@@ -146,25 +207,12 @@ public class DashboardActivity extends AppCompatActivity {
     private BroadcastReceiver mLoginReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getBooleanExtra(API_STATUS, false)){
+            if (intent.getBooleanExtra(API_STATUS, false)) {
                 alert.dismiss();
                 startService(new Intent(DashboardActivity.this, TokenValidationService.class));
-            }
-            else {
+            } else {
                 mTokenSubmit.setText(R.string.log_in);
                 mTokenSubmit.setEnabled(true);
-            }
-        }
-    };
-
-    private BroadcastReceiver mDashboardReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if ((ArrayList<Customer>) intent.getSerializableExtra(API_RESULT)!=null) {
-                arrayList = (ArrayList<Customer>) intent.getSerializableExtra(API_RESULT);
-                mList.setAdapter(new CustomerAdapter(arrayList, DashboardActivity.this));
-                mShimmer.setVisibility(View.GONE);
-                rootLayout.setVisibility(View.VISIBLE);
             }
         }
     };
@@ -179,12 +227,8 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        startService(new Intent(this, DashboardService.class)
-                .putExtra("pageNo", "1")
-                .putExtra("pageSize", "10")
-        );
+        getSupportFragmentManager().beginTransaction().replace(R.id.user_module_container, new DashboardFragment()).commitAllowingStateLoss();
         startService(new Intent(this, TokenValidationService.class));
-        LocalBroadcastManager.getInstance(this).registerReceiver(mDashboardReceiver, new IntentFilter(BROADCAST_ID_FOR_DASHBOARD));
         LocalBroadcastManager.getInstance(this).registerReceiver(mLoginReceiver, new IntentFilter(BROADCAST_ID_FOR_LOGIN));
         LocalBroadcastManager.getInstance(this).registerReceiver(mTokenValidationReceiver, new IntentFilter(BROADCAST_ID_FOR_TOKEN_EXPIRE));
     }
@@ -192,8 +236,28 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(mDashboardReceiver);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mLoginReceiver);
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mTokenValidationReceiver);
+    }
+
+    private void resetNav() {
+        resetCardBackgroundColor(mNavHome);
+        resetCardContent(mNavHomeLogo, mNavHomeText);
+        resetCardBackgroundColor(mNavAddCustomer);
+        resetCardContent(mNavAddCustomerLogo, mNavAddCustomerText);
+        resetCardBackgroundColor(mNavChangePassword);
+        resetCardContent(mNavChangePasswordLogo, mNavChangePasswordText);
+        resetCardBackgroundColor(mNavLogout);
+        resetCardContent(mNavLogoutLogo, mNavLogoutText);
+    }
+
+    private void resetCardBackgroundColor(MaterialCardView cardView) {
+        cardView.setCardBackgroundColor(getResources().getColor(android.R.color.white));
+        cardView.setCardElevation(0.0f);
+    }
+
+    private void resetCardContent(ImageView imageView, TextView textView) {
+        imageView.setColorFilter(getResources().getColor(R.color.colorAccent));
+        textView.setTextColor(getResources().getColor(R.color.colorAccent));
     }
 }

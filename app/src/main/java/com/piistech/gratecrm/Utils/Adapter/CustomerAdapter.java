@@ -1,10 +1,6 @@
 package com.piistech.gratecrm.Utils.Adapter;
 
-import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Context;
-import android.content.Intent;
-import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +12,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.piistech.gratecrm.Model.Customer;
 import com.piistech.gratecrm.R;
-import com.piistech.gratecrm.View.CustomerDetailsActivity;
+import com.piistech.gratecrm.View.User.Fragments.CustomerDetailsFragment;
+import com.piistech.gratecrm.View.User.Fragments.DashboardFragment;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
+
+import static com.piistech.gratecrm.Utils.Constant.sendToFragment;
 
 public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHolder> {
     private ArrayList<Customer> arrayList = new ArrayList<>();
@@ -50,16 +49,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
         holder.mParent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, CustomerDetailsActivity.class);
-                intent.putExtra("id", String.valueOf(customer.getId()));
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                Pair[] pairs = new Pair[4];
-                pairs[0] = new Pair<View, String>(holder.mPhoto, "customerImage");
-                pairs[1] = new Pair<View, String>(holder.mName, "customerName");
-                pairs[2] = new Pair<View, String>(holder.mPhone, "customerPhone");
-                pairs[3] = new Pair<View, String>(holder.mEmail, "customerEmail");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, pairs);;
-                context.startActivity(intent, options.toBundle());
+                sendToFragment(context, view, new CustomerDetailsFragment(String.valueOf(customer.getId())));
             }
         });
     }

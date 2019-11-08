@@ -246,7 +246,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         inputLayout.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                mScroll.scrollTo(0, status.getTop());
+                mScroll.scrollTo(0, status.getTop()-16);
             }
 
             @Override
@@ -278,6 +278,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         mType.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(MaterialSpinner view, int position, long id, Object item) {
+                mScroll.scrollTo(0, status.getTop()-16);
                 validateType(inputLayout, status);
                 formSubmissionStatus();
             }

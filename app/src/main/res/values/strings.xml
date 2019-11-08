@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GrateCRM</string>
+    <string name="app_name">Grate App</string>
     <string name="moto">Cloud Based Business Management Software for Basement Waterproofing Grate Products Dealers.</string>
     <string name="login_text"><b>Log In</b> to your account to continue basement inspection.</string>
     <string name="username">Username</string>
@@ -20,4 +20,7 @@
     <string name="submit">Submit</string>
     <string name="loading">Loading...</string>
     <string name="basement_inspection_report">Basement Inspection Report</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">Change Password</string>
 </resources>

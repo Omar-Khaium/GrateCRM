@@ -9,7 +9,7 @@
     android:clickable="true"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".View.LoginActivity"
+    tools:context=".View.Login.LoginActivity"
     android:fitsSystemWindows="true">
 
     <ImageView
@@ -45,7 +45,13 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/basement" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000"/>
+
                 <ImageView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
@@ -66,7 +72,7 @@
                         android:fontFamily="@font/font_bold"
                         android:text="Welcome To Grate App"
                         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                        android:textColor="@android:color/white" />
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -76,7 +82,7 @@
                         android:fontFamily="@font/font_bold"
                         android:text="@string/login_text"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="#BFFFFFFF" />
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
             </RelativeLayout>
