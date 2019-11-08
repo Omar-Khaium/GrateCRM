@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp">
+            android:paddingBottom="16dp"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -35,7 +40,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp">
+                        android:layout_marginTop="16dp">
 
                         <ImageView
                             android:id="@+id/row_layout_customer_location"
@@ -62,7 +67,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp">
+                        android:layout_marginTop="16dp">
 
                         <ImageView
                             android:id="@+id/row_layout_customer_mail"
@@ -89,7 +94,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp">
+                        android:layout_marginTop="16dp">
 
                         <ImageView
                             android:id="@+id/row_layout_customer_call"
@@ -134,7 +139,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_shape_rounded_disabled_textview"
                     android:fontFamily="@font/font_regular"
                     android:padding="16dp"
@@ -144,5 +149,1236 @@
             </LinearLayout>
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:contentPadding="16dp"
+                app:strokeColor="#20000000"
+                app:strokeWidth="1px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/font_bold"
+                    android:text="Relative Humidity / Temperature Readings"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="-8dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="1dp"
+                app:cardMaxElevation="2dp"
+                app:strokeColor="#20000000"
+                app:strokeWidth="1px">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_current_outside_conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Current Outside Conditions*"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Current Outside Conditions*"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Outside Relative Humidity*"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Outside Temperature*"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="1st Floor Relative Humidity"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="1st Floor Temperature"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardElevation="2dp"
+                        app:cardMaxElevation="2dp"
+                        app:contentPaddingBottom="8dp"
+                        app:contentPaddingLeft="16dp"
+                        app:contentPaddingRight="16dp"
+                        app:contentPaddingTop="8dp"
+                        app:strokeColor="#20000000"
+                        app:strokeWidth="1px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/font_bold"
+                            android:text="Current Inside Condition"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="-8dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardElevation="1dp"
+                        app:cardMaxElevation="2dp"
+                        app:strokeColor="#20000000"
+                        app:strokeWidth="1px">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                android:id="@+id/fragment_add_basement_report_heat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:hint="Heat *"
+                                android:textColorHint="@android:color/darker_gray"
+                                app:ms_arrow_tint="@color/colorAccent"
+                                app:ms_background_color="@color/colorSandOffWhite"
+                                app:ms_hint="Heat *"
+                                app:ms_hint_color="@android:color/darker_gray"
+                                app:ms_text_color="@color/colorAccent" />
+
+                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                android:id="@+id/fragment_add_basement_report_air"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:hint="Air *"
+                                android:textColorHint="@android:color/darker_gray"
+                                app:ms_arrow_tint="@color/colorAccent"
+                                app:ms_background_color="@color/colorSandOffWhite"
+                                app:ms_hint="Air *"
+                                app:ms_hint_color="@android:color/darker_gray"
+                                app:ms_text_color="@color/colorAccent" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:hint="Basement Relative Humidity"
+                                app:hintEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/font_regular"
+                                    android:inputType="number"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:hint="Basement Temperature"
+                                app:hintEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/font_regular"
+                                    android:inputType="number"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                android:id="@+id/fragment_add_basement_report_basement_dehumidifier"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:hint="Basement Dehumidifier *"
+                                android:textColorHint="@android:color/darker_gray"
+                                app:ms_arrow_tint="@color/colorAccent"
+                                app:ms_background_color="@color/colorSandOffWhite"
+                                app:ms_hint="Basement Dehumidifier *"
+                                app:ms_hint_color="@android:color/darker_gray"
+                                app:ms_text_color="@color/colorAccent" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Other"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Other"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:contentPadding="16dp"
+                app:strokeColor="#20000000"
+                app:strokeWidth="1px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/font_bold"
+                    android:text="Visual Basement Inspection"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="-8dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="1dp"
+                app:cardMaxElevation="2dp"
+                app:strokeColor="#20000000"
+                app:strokeWidth="1px">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_ground_water"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Ground Water *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Ground Water *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_ground_water_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Ground Water Rating (1-10)"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Ground Water Rating (1-10)"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_iron_bacteria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Iron Bacteria *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Iron Bacteria *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_iron_bacteria_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Iron Bacteria Rating (1-10)"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Iron Bacteria Rating (1-10)"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_condensation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Condensation *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Condensation *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_condensation_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Condensation Rating (1-10) *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Condensation Rating (1-10) *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_wall_cracks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Wall Cracks *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Wall Cracks *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_wall_cracks_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Wall Cracks Rating (1-10) *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Wall Cracks Rating (1-10) *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_floor_cracks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Floor Cracks *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Floor Cracks *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_floor_cracks_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Floor Cracks Rating (1-10)"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Floor Cracks Rating (1-10)"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_existing_sump_pump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Existing Sump Pump *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Existing Sump Pump *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_existing_drainage_system"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Existing Drainage System *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Existing Drainage System *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_radon_system"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Radon System(existing) *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Radon System(existing) *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_dryer_vent_to_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Dryer Vent To Code? *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Dryer Vent To Code? *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/fragment_add_basement_report_bulkhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Bulkhead *"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:ms_arrow_tint="@color/colorAccent"
+                        app:ms_background_color="@color/colorSandOffWhite"
+                        app:ms_hint="Foundation Type *"
+                        app:ms_hint_color="@android:color/darker_gray"
+                        app:ms_text_color="@color/colorAccent" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Other"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:contentPadding="16dp"
+                app:strokeColor="#20000000"
+                app:strokeWidth="1px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/font_bold"
+                    android:text="Customer Basement Evaluation"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="-8dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="1dp"
+                app:cardMaxElevation="2dp"
+                app:strokeColor="#20000000"
+                app:strokeWidth="1px">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="1. Have you ever noticed smells/odors coming from the basement?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:hint="Required"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingStart="16dp"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="2. Have you ever noticed mold/mildew on any item in the basement?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:hint="Required"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingStart="16dp"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="3. How often do you go down in the basement?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="4. Does anyone in the home suffer from respiratory problems?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="5. Do your children play in the basement?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="6. Do you have pets that go in the basement?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="7. Have you ever noticed bugs/rodents in the basement?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="8. Do you get water?* How high does the water level get?"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="9. How do you normally remove the water from basement?"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="10. Do you ever see pipes dripping (condensation)?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="11. Have you done any repairs to try and fix these problems?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="12. How long do you plan on living here?* Are you planning to sell*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="13. What are your plans for the basement once it is dry?"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="14. Has your home been tested for radon in the past 2 years?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/font_bold"
+                        android:singleLine="true"
+                        android:text="15. Do you lose power?* If so how often?*"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:hint="Please select one"
+                            android:textColorHint="@android:color/darker_gray"
+                            app:ms_arrow_tint="@color/colorAccent"
+                            app:ms_background_color="@color/colorSandOffWhite"
+                            app:ms_hint="Please select one"
+                            app:ms_hint_color="@android:color/darker_gray"
+                            app:ms_text_color="@color/colorAccent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="3"
+                            android:paddingStart="16dp"
+                            android:background="@color/colorSandOffWhite"
+                            android:fontFamily="@font/font_regular"
+                            android:imeOptions="actionDone"
+                            android:hint="Required"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Other"
+                        app:hintEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
