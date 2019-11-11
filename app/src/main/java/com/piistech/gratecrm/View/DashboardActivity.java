@@ -27,6 +27,7 @@ import com.piistech.gratecrm.Utils.LocalDatabase;
 import com.piistech.gratecrm.Utils.Service.LoginService;
 import com.piistech.gratecrm.Utils.Service.TokenValidationService;
 import com.piistech.gratecrm.View.Login.LoginActivity;
+import com.piistech.gratecrm.View.User.Fragments.AddCustomerFragment;
 import com.piistech.gratecrm.View.User.Fragments.DashboardFragment;
 
 import java.util.ArrayList;
@@ -123,6 +124,7 @@ public class DashboardActivity extends AppCompatActivity {
                 mNavAddCustomer.setCardBackgroundColor(getResources().getColor(R.color.colorAccent));
                 mNavAddCustomerLogo.setColorFilter(getResources().getColor(android.R.color.white));
                 mNavAddCustomerText.setTextColor(getResources().getColor(android.R.color.white));
+                getSupportFragmentManager().beginTransaction().replace(R.id.user_module_container, new AddCustomerFragment()).commitAllowingStateLoss();
             }
         });
 
